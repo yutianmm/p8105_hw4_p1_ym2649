@@ -15,3 +15,8 @@ pups_data = read_csv("./FAS_pups.csv", col_types = "ciiiii") %>%
 clean_names() %>%
 gather(key = development_landmark, value = PD_outcome, pd_ears:pd_walk)
 ```
+
+```{r plot by Zhuyu Qiu}
+ggplot(pups_data, aes(x = development_landmark, y = PD_outcome)) + 
+  geom_violin(aes(fill = development_landmark), color = "blue", alpha = .5)+geom_boxplot(width=0.03)
+```
