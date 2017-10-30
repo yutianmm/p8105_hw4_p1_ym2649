@@ -18,5 +18,7 @@ gather(key = development_landmark, value = PD_outcome, pd_ears:pd_walk)
 
 ```{r plot by Zhuyu Qiu}
 ggplot(pups_data, aes(x = development_landmark, y = PD_outcome)) + 
-  geom_violin(aes(fill = development_landmark), color = "blue", alpha = .5)+geom_boxplot(width=0.03)
+  geom_violin(aes(fill = development_landmark), color = "blue", alpha = .5)+geom_boxplot(width=0.03)+labs(x ="development_landmark", y = "pd_outcome", title = "The relationship between developmental landmark and post-natal days")
 ```
+
+From this plot, we can see that the distributions of post-natal days for each the developmental landmark have huge difference. pd_ears has the least post-natal days, while pd_eyes has the most. And the pd_pivot has the widest range, while pd_ears has the narrowest. And all the distributions have the obvious waved distribution except the pd_pivot, meaning there are clusters in the distribution for each developmental landmark.
